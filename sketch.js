@@ -7,7 +7,7 @@
 // Edited by SacrificeProductions
 
 var cols, rows;
-var scl = 20;
+var scl = 50;
 var w = 1400;
 var h = 1000;
 
