@@ -7,7 +7,7 @@
 // Edited by SacrificeProductions
 
 var cols, rows;
-var scl = 20;
+var scl = 50;
 var w = 1400;
 var h = 1000;
 
@@ -29,6 +29,16 @@ function setup() {
 }
 
 function draw() {
+
+  push();
+  translate(0, -100, 0);
+  rotateX(millis() / 1000);
+  rotateY(millis() / 1000);
+  ambientLight(100); // white light
+  ambientMaterial(200, 200, 200); // gray material
+  box(100);
+  pop();
+
   flying -= 0.05;
   var yoff = flying;
   for (var y = 0; y < rows; y++) {
@@ -43,7 +53,7 @@ function draw() {
   background(0);
   translate(0, 50);
   rotateX(PI / 3);
-  fill(200, 200, 200, 50);
+  fill(255, 0, 255, 200);
   translate(-w / 2, -h / 2);
   for (var y = 0; y < rows - 1; y++) {
     beginShape(TRIANGLE_STRIP);
